@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>tdpessanha</groupId>
+    <artifactId>scala-retry</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <packaging>jar</packaging>
+
+    <properties>
+        <!--scala -->
+        <scala.major.version>2.13</scala.major.version>
+        <scala.minor.version>8</scala.minor.version>
+
+        <!-- Dependencies versions -->
+        <scalatest.version>3.2.12</scalatest.version>
+        <scalamock.version>5.2.0</scalamock.version>
+        <typesafe.version>3.9.4</typesafe.version>
+        <logback.version>1.2.11</logback.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- scala -->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.major.version}.${scala.minor.version}</version>
+        </dependency>
+
+        <!-- logging -->
+        <dependency>
+            <groupId>com.typesafe.scala-logging</groupId>
+            <artifactId>scala-logging_${scala.major.version}</artifactId>
+            <version>${typesafe.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+
+
+        <!-- Test dependencies -->
+
+        <!-- Scala tests -->
+
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest_${scala.major.version}</artifactId>
+            <version>${scalatest.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scalamock</groupId>
+            <artifactId>scalamock_${scala.major.version}</artifactId>
+            <scope>test</scope>
+            <version>${scalamock.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <developers>
+        <developer>
+            <name>Tomás Pessanha</name>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+</project>

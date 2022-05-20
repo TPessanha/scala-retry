@@ -1,0 +1,1 @@
+class ImmediateRetry(maxAttempts: Int = 3) extends RetryPolicy(maxAttempts)
