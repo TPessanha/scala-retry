@@ -21,7 +21,7 @@ class ExponentialBackOffSpec extends UnitSpec {
     after = Instant.now()
     assert(Duration.between(before, after).getSeconds >= 4)
 
-    assert(policy.hasEnded)
+    assert(policy.hasEnded())
 
   }
 }
